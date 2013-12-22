@@ -6,10 +6,11 @@ Created on Dec 22, 2013
 from gimphwconsole.list_output_devices import get_output_device_id
 import pygame
 import pygame.midi
+import time
 
 CHURCH_ORGAN = 19
 
-NOTE = 1
+NOTE = 0
 
 
 def main():
@@ -27,11 +28,17 @@ def main():
     midi_out.set_instrument(CHURCH_ORGAN)
     # mouse_note, velocity, __, __  = regions.get_at(e.pos)
 
-    print "note_on()"
-    midi_out.note_on(NOTE, 127)
-    print "note_off()"
-    midi_out.note_off(NOTE)
+    print "Waiting 2 secs..."
+    time.sleep(2)
 
+    for velocity in (0, 25, 50, 75, 100, 127):
+        print "note_on()"
+        midi_out.note_on(NOTE, velocity)
+    
+        print "note_off()"
+        midi_out.note_off(NOTE)
+
+        time.sleep(1)
 
 if __name__ == '__main__':
     main()
