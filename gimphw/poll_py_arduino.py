@@ -5,7 +5,7 @@ Created on Dec 22, 2013
 '''
 import pygame.midi
 
-from gimphwconsole.list_output_devices import get_output_device_id
+from gimphw.list_output_devices import get_output_device_id
 from py_arduino.arduino import PyArduino
 
 

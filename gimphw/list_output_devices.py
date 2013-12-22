@@ -3,7 +3,6 @@ Created on Dec 22, 2013
 
 @author: Horacio G. de Oro
 '''
-import pygame
 import pygame.midi
 
 

@@ -3,10 +3,11 @@ Created on Dec 22, 2013
 
 @author: Horacio G. de Oro
 '''
-from gimphwconsole.list_output_devices import get_output_device_id
-import pygame
 import pygame.midi
 import time
+
+from gimphw.list_output_devices import get_output_device_id
+
 
 CHURCH_ORGAN = 19
 
