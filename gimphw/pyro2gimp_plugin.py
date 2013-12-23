@@ -54,6 +54,9 @@ def start_pyro3_server(*args, **kwargs):
         def set_layer_opacity(self, opacity):
             print "Setting layer opacity to {}".format(opacity)
 
+        def set_paintbrush_opacity(self, opacity):
+            print "Setting paintbrush opacity to {}".format(opacity)
+
     print "Instantiating server..."
     remote_gimp = Pyro3Server()
 
