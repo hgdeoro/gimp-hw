@@ -1,8 +1,15 @@
-'''
-Created on Dec 22, 2013
+# -*- coding: utf-8 -*-
 
-@author: Horacio G. de Oro
-'''
+#
+# WARNING: this is just a prototype, a proof of concept
+#  made to test different options to integrate Arduino to Gimp.
+#
+# This code laks tests, and no effort of any kind was made
+# to create robust, good quality, maintainable code!
+#
+# You have been averted :-D
+#
+
 import pygame.midi
 
 

@@ -1,6 +1,16 @@
 # -*- coding: utf-8 -*-
 
 #
+# WARNING: this is just a prototype, a proof of concept
+#  made to test different options to integrate Arduino to Gimp.
+#
+# This code laks tests, and no effort of any kind was made
+# to create robust, good quality, maintainable code!
+#
+# You have been averted :-D
+#
+
+#
 # Based on script from Frédéric Jaume:
 # http://www.exp-media.com/content/extending-gimp-python-python-fu-plugins-part-2
 #
