@@ -53,6 +53,16 @@ def start_pyro3_server(*args, **kwargs):
 
         def set_layer_opacity(self, opacity):
             print "Setting layer opacity to {}".format(opacity)
+            try:
+                image = gimp.image_list()[0]
+                layer = pdb.gimp_image_get_active_layer(image)
+                value = opacity / float(10.0)
+                if value > 100.0:
+                    layer.opacity = 100.0
+                else:
+                    layer.opacity = value
+            except:
+                print "ERROR"
 
         def set_paintbrush_opacity(self, opacity):
             print "Setting paintbrush opacity to {}".format(opacity)
