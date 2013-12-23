@@ -56,7 +56,7 @@ def start_pyro3_server(*args, **kwargs):
             try:
                 image = gimp.image_list()[0]
                 layer = pdb.gimp_image_get_active_layer(image)
-                value = opacity / float(10.0)
+                value = opacity / float(9.0)
                 if value > 100.0:
                     layer.opacity = 100.0
                 else:
@@ -66,6 +66,15 @@ def start_pyro3_server(*args, **kwargs):
 
         def set_paintbrush_opacity(self, opacity):
             print "Setting paintbrush opacity to {}".format(opacity)
+            try:
+                value = opacity / float(9.0)
+                if value > 100.0:
+                    pdb.gimp_context_set_opacity(100.0)
+                else:
+                    pdb.gimp_context_set_opacity(value)
+                    
+            except:
+                print "ERROR"
 
     print "Instantiating server..."
     remote_gimp = Pyro3Server()
